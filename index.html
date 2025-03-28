@@ -1,0 +1,151 @@
+<!DOCTYPE html>  <!--Объявление формата документа-->
+<html lang="ru">
+<head> <!-- Техническая информация о документе -->
+    <meta charset="UTF-8"> <!-- Определяем кодировку символов документа -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сетка</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+<header> <!-- Шапка -->
+    <div class="header">
+
+        <!-- Иконка меню -->
+        <div class="header__icon header__icon-burger">
+               <button class="header__icon-img" >
+                   <svg xmlns="http://www.w3.org/2000/svg" width="18" height="16" fill="none"><path fill="#fff" fill-rule="evenodd" d="M0 1a1 1 0 0 1 1-1h16a1 1 0 1 1 0 2H1a1 1 0 0 1-1-1Zm0 7a1 1 0 0 1 1-1h8a1 1 0 0 1 0 2H1a1 1 0 0 1-1-1Zm1 6a1 1 0 1 0 0 2h12a1 1 0 1 0 0-2H1Z" clip-rule="evenodd"/></svg>
+               </button>
+        </div>
+        <!-- разделитель первый -->
+        <div class="header__divider header__divider--first">
+            <svg xmlns="http://www.w3.org/2000/svg" width="2" height="32" fill="none"><rect width="2" height="32" fill="#EAEAEA" rx="1"/></svg>
+        </div>
+        <!-- Логотип -->
+        <div class="header__logo-container">
+            <img class="header__logo" src="foto/Group.png" alt="Логотип" />
+        </div>
+        <!-- Иконка звонок -->
+        <div class="header__icon header__icon-phone">
+               <button class="header__icon-img">
+                   <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none"><path fill="#fff" fill-rule="evenodd" d="m1.76 12.25 2.54-.29c.61-.07 1.21.14 1.64.57l1.84 1.84c2.83-1.44 5.15-3.75 6.59-6.59l-1.85-1.85a1.99 1.99 0 0 1-.57-1.64l.29-2.52C12.36.76 13.21 0 14.23 0h1.73c1.13 0 2.07.94 2 2.07-.53 8.54-7.36 15.36-15.89 15.89-1.13.07-2.07-.87-2.07-2v-1.73c-.01-1.01.75-1.86 1.76-1.98Z" clip-rule="evenodd"/></svg>
+               </button>
+        </div>
+        <!-- Иконка сообщений -->
+        <div class="header__icon header__icon-message">
+               <button class="header__icon-img">
+                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none"><path fill="#fff" fill-rule="evenodd" d="M18 0H2C.9 0 .01.9.01 2L0 20l4-5h14c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2Zm-7 11H5c-.55 0-1-.45-1-1s.45-1 1-1h6c.55 0 1 .45 1 1s-.45 1-1 1Zm4-5H5c-.55 0-1-.45-1-1s.45-1 1-1h10c.55 0 1 .45 1 1s-.45 1-1 1Z" clip-rule="evenodd"/></svg>
+               </button>
+        </div>
+        <!-- Иконка контакты -->
+        <div class="header__icon header__icon-contacts">
+            <button class="header__icon-img">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="18" fill="none"><path fill="#fff" d="M10.5 9a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9ZM.017 16.612C-.113 17.342.535 18 1.339 18H18.66c.83 0 1.453-.659 1.323-1.388C19.23 12.4 15.056 10 10 10 4.943 10 .769 12.4.017 16.612Z"/></svg>
+            </button>
+        </div>
+        <!-- разделитель -->
+        <div class="header__divider">
+            <svg xmlns="http://www.w3.org/2000/svg" width="2" height="32" fill="none"><rect width="2" height="32" fill="#EAEAEA" rx="1"/></svg>
+        </div>
+        <!-- Иконка для ремонта -->
+        <div class="header__icon header__icon-repair">
+               <button class="header__icon-img" >
+                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none"><path fill="#fff" d="m8.258 13.458.409-.409-1.717-1.717-.409.41-.204-.205c-.327-.368-.654-.573-.981-.532-.246 0-.45.164-.613.409-.246.409-.123.859-.082 1.145 0 .082.04.123.04.204 0 .123 0 .286-.285.327-.41.123-.94.246-1.472.532-.736.409-1.226.777-1.512 1.145C-.081 16.729 0 18.406 0 18.487c0 .123.04.205.122.246l1.104 1.144c.082.082.164.123.245.123h.123c.409 0 1.88-.082 3.597-1.431.368-.286.736-.777 1.145-1.513.286-.49.45-1.022.531-1.472.082-.286.205-.286.327-.286.041 0 .123.041.205.041.163.04.327.082.531.082.204 0 .409-.041.613-.164.245-.163.409-.368.45-.613.04-.327-.123-.654-.49-.94l-.246-.246ZM16.884 4.878l1.135-.552c.042-.042.126-.085.168-.127l1.723-2.337c.126-.17.126-.425-.042-.553L18.691.12c-.126-.127-.378-.17-.546-.042l-2.312 1.742a.588.588 0 0 0-.126.17l-.546 1.147L11 7.216 12.765 9l4.119-4.122Z"/><path fill="#fff" d="M17.853 13.045c-.99-1.041-2.414-1.416-3.759-1.041l-6.449-6.83c.08-.376.119-.709.119-1.084a4.184 4.184 0 0 0-1.147-2.873 3.696 3.696 0 0 0-3.996-1 .542.542 0 0 0-.238.333c0 .125.04.25.119.375l1.939 2.041c.435.458.435 1.25 0 1.708a1.129 1.129 0 0 1-1.622 0L.879 2.633c-.118-.084-.236-.125-.395-.084-.118 0-.237.125-.277.25-.474 1.458-.118 3.082.91 4.165.712.791 1.741 1.208 2.77 1.208.316 0 .672-.042.989-.125l6.488 6.83a4.339 4.339 0 0 0 .99 3.957A3.668 3.668 0 0 0 15.083 20c.434 0 .83-.083 1.265-.208a.491.491 0 0 0 .277-.292.346.346 0 0 0-.119-.375l-1.938-2.04a1.332 1.332 0 0 1-.356-.875c0-.333.119-.625.356-.875s.514-.374.83-.374c.317 0 .594.124.832.374l1.938 2.041a.617.617 0 0 0 .356.125c.119-.042.238-.125.277-.25A4.92 4.92 0 0 0 19 15.918c0-1.082-.396-2.124-1.147-2.873Z"/></svg>
+               </button>
+        </div>
+        <!-- Иконка для статуса -->
+        <div class="header__icon header__icon-status">
+              <button class="header__icon-img" >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="20" fill="none"><path fill="#fff" fill-rule="evenodd" d="M0 1a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v17.5a1.5 1.5 0 0 0-1.5 1.5h-1a1.5 1.5 0 0 0-3 0h-1a1.5 1.5 0 0 0-3 0h-1a1.5 1.5 0 0 0-3 0h-1A1.5 1.5 0 0 0 0 18.5V1Zm9.416 10.788a4.236 4.236 0 0 1-3.086.595c-1.803-.336-3.24-1.85-3.47-3.672a4.318 4.318 0 0 1 4.994-4.83c1.802.287 3.25 1.763 3.547 3.555a4.247 4.247 0 0 1-.614 2.991l2.109 2.1a.97.97 0 0 1-1.37 1.37l-2.11-2.109Zm-4.71-3.73a2.354 2.354 0 1 1 4.707.002 2.354 2.354 0 0 1-4.707-.001Z" clip-rule="evenodd"/></svg>
+              </button>
+        </div>
+
+    </div>
+
+    <!-- Разделитель снизу -->
+    <svg class="header__svg-320" xmlns="http://www.w3.org/2000/svg" width="320" height="1" fill="none"><path fill="#D9FFF5" d="M0 0h320v1H0z"/></svg>
+
+    <!-- Разделитель снизу -->
+    <svg class="header__svg-768" xmlns="http://www.w3.org/2000/svg" width="768" height="1" fill="none"><path fill="#D9FFF5" d="M0 0h768v1H0z"/></svg>
+
+</header>
+
+<main>
+
+    <!-- Основная секция -->
+    <div class="section">
+
+        <!-- Секция заголовок+иконки -->
+        <div class="section__title-icon">
+        <!-- Заголовок секции -->
+        <div class="section__title">
+            <img class="section__img-highlight" src="foto/highlight.png" alt="Боковой разделитель"/>
+            <h1 class="section__title-text"> Услуги и сервисы</h1>
+        </div>
+            <!-- Иконка для ремонта для 1120 -->
+            <div class="section__icon section__icon-repair">
+                <span class="section__span-repair">Оставить заявку</span>
+                <button class="section__icon-img" >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none"><path fill="#fff" d="m8.258 13.458.409-.409-1.717-1.717-.409.41-.204-.205c-.327-.368-.654-.573-.981-.532-.246 0-.45.164-.613.409-.246.409-.123.859-.082 1.145 0 .082.04.123.04.204 0 .123 0 .286-.285.327-.41.123-.94.246-1.472.532-.736.409-1.226.777-1.512 1.145C-.081 16.729 0 18.406 0 18.487c0 .123.04.205.122.246l1.104 1.144c.082.082.164.123.245.123h.123c.409 0 1.88-.082 3.597-1.431.368-.286.736-.777 1.145-1.513.286-.49.45-1.022.531-1.472.082-.286.205-.286.327-.286.041 0 .123.041.205.041.163.04.327.082.531.082.204 0 .409-.041.613-.164.245-.163.409-.368.45-.613.04-.327-.123-.654-.49-.94l-.246-.246ZM16.884 4.878l1.135-.552c.042-.042.126-.085.168-.127l1.723-2.337c.126-.17.126-.425-.042-.553L18.691.12c-.126-.127-.378-.17-.546-.042l-2.312 1.742a.588.588 0 0 0-.126.17l-.546 1.147L11 7.216 12.765 9l4.119-4.122Z"/><path fill="#fff" d="M17.853 13.045c-.99-1.041-2.414-1.416-3.759-1.041l-6.449-6.83c.08-.376.119-.709.119-1.084a4.184 4.184 0 0 0-1.147-2.873 3.696 3.696 0 0 0-3.996-1 .542.542 0 0 0-.238.333c0 .125.04.25.119.375l1.939 2.041c.435.458.435 1.25 0 1.708a1.129 1.129 0 0 1-1.622 0L.879 2.633c-.118-.084-.236-.125-.395-.084-.118 0-.237.125-.277.25-.474 1.458-.118 3.082.91 4.165.712.791 1.741 1.208 2.77 1.208.316 0 .672-.042.989-.125l6.488 6.83a4.339 4.339 0 0 0 .99 3.957A3.668 3.668 0 0 0 15.083 20c.434 0 .83-.083 1.265-.208a.491.491 0 0 0 .277-.292.346.346 0 0 0-.119-.375l-1.938-2.04a1.332 1.332 0 0 1-.356-.875c0-.333.119-.625.356-.875s.514-.374.83-.374c.317 0 .594.124.832.374l1.938 2.041a.617.617 0 0 0 .356.125c.119-.042.238-.125.277-.25A4.92 4.92 0 0 0 19 15.918c0-1.082-.396-2.124-1.147-2.873Z"/></svg>
+                </button>
+            </div>
+            <!-- Иконка для статуса для 1120 -->
+            <div class="section__icon section__icon-status">
+                <span class="section__span-status">Статус ремонта</span>
+                <button class="section__icon-img" >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="20" fill="none"><path fill="#fff" fill-rule="evenodd" d="M0 1a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v17.5a1.5 1.5 0 0 0-1.5 1.5h-1a1.5 1.5 0 0 0-3 0h-1a1.5 1.5 0 0 0-3 0h-1a1.5 1.5 0 0 0-3 0h-1A1.5 1.5 0 0 0 0 18.5V1Zm9.416 10.788a4.236 4.236 0 0 1-3.086.595c-1.803-.336-3.24-1.85-3.47-3.672a4.318 4.318 0 0 1 4.994-4.83c1.802.287 3.25 1.763 3.547 3.555a4.247 4.247 0 0 1-.614 2.991l2.109 2.1a.97.97 0 0 1-1.37 1.37l-2.11-2.109Zm-4.71-3.73a2.354 2.354 0 1 1 4.707.002 2.354 2.354 0 0 1-4.707-.001Z" clip-rule="evenodd"/></svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Горизонтально прокручиваемое меню -->
+        <div class="section__menu">
+            <div class="section__menu-list">
+                <button class="section__menu-item section__menu-item--active">Ремонтируемые устройства</button>
+                <div class="section__gradient"></div>
+                <button class="section__menu-item section__button-second">Дополнительные услуги</button>
+                <button class="section__menu-item section__button-third">Цены на услуги</button>
+                <button class="section__menu-item section__button-fourth">Адреса сервисных центров</button>
+                <button class="section__menu-item section__button-fifth">Специальные цены</button>
+                <button class="section__menu-item section__button-sixth">Отзывы</button>
+            </div>
+        </div>
+
+        <!-- Основной контент -->
+        <div class="section__first-block">
+
+            <!-- блок текст и кнопка -->
+            <div class="section__content">
+
+            <!-- Основной текст -->
+            <div class="section__text">
+                <p>Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.</p>
+                <p class="section__hidden-text">Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера,<span class="section__hidden-text-second"> что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.</span></p>
+            </div>
+
+            <!-- Кнопка читать далее -->
+            <div class="section__read-more">
+                <button class="section__read-more-text">
+                    <!-- Секция левая - стрелки svg-код -->
+                    <span class="section__read-more-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="8" height="11" fill="none"><path fill="#41F6D7" fill-rule="evenodd" d="M6.5.5 4 3 1.5.5a.707.707 0 0 0-1 1l2.793 2.793a1 1 0 0 0 1.414 0L7.5 1.5a.707.707 0 0 0-1-1Zm0 6L4 9 1.5 6.5a.707.707 0 1 0-1 1l2.793 2.793a1 1 0 0 0 1.414 0L7.5 7.5a.707.707 0 0 0-1-1Z" clip-rule="evenodd"/></svg>
+                    </span>
+                    <!-- Секция правая - текст -->
+                    <span class="section__read-more-text-content">Читать далее</span>
+
+                </button>
+            </div>
+            </div>
+            <!-- Изображение сервисного центра -->
+            <img class="section__img-picture" src="foto/_MG_3223.png" alt="Изображение сервисного центра" />
+
+        </div>
+    </div>
+
+</main>
+
+
+</body>
+<script src="main.js"></script>
+</html>
