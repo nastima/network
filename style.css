@@ -1,17 +1,419 @@
-@media (min-width: 769px) {
+/*Общие стили (mobile first)*/
+* {
+    box-sizing: border-box;
+}
 
-    /*Общие стили*/
-    * {
-        box-sizing: border-box;
-    }
+/*Тело*/
+body {
+    width: 100%;
+    min-width: 320px;
+    font-family: "TT Lakes", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/*Шапка*/
+.header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 88px;
+    margin: 0;
+    position: relative;
+}
+
+/*Иконки*/
+.header__icon {
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+/*Иконки - изображения*/
+.header__icon-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #FF3E79;
+    border: none;
+}
+
+/*Иконка меню*/
+.header__icon-burger {
+    margin-right: 16px;
+    margin-left: 16px;
+}
+
+/*Иконка для ремонта и для статуса*/
+.header__icon-repair,
+.header__icon-status{
+    margin-right: 16px;
+}
+
+/*Скрытые иконки*/
+.header__icon-phone,
+.header__icon-message,
+.header__icon-contacts,
+.header__divider--first,
+.header__svg-768 {
+    display: none;
+}
+
+/*Логотип*/
+.header__logo-container {
+    width: 97px;
+    height: 50px;
+    margin-top: 19px;
+    margin-bottom: 19px;
+    margin-right: 16px;
+}
+
+/*Разделитель*/
+.header__divider {
+    margin-bottom: 28px;
+    margin-top: 28px;
+    margin-right: 20px;
+}
+
+/*Разделитель снизу*/
+.header__svg-320 {
+    display: block;
+    height: 1px;
+    width: 100%;
+    margin: 0;
+    position: absolute;
+}
+
+/*Основная секция*/
+.section {
+    width: 100%;
+    min-height: 509px;
+    background-color: #F8F8F8;
+    margin-top: 0;
+    padding-top: 24px;
+}
+
+/*Скрытые иконки*/
+.section__icon {
+    display: none;
+}
+
+.section__title-icon {
+    max-width: 304px;
+    height: 40px;
+    padding: 0;
+    margin-right: 16px;
+    margin-bottom: 24px;
+}
+
+/*Заголовок секции*/
+.section__title {
+    max-width: 304px;
+    min-height: 40px;
+    display: flex;
+}
+
+/*Боковой разделитель*/
+.section__img-highlight {
+    max-width: 4px;
+    min-height: 40px;
+    margin-right: 12px;
+}
+
+/*Заголовок*/
+.section__title-text {
+    font-size: 28px;
+    max-width: 288px;
+    min-height: 30px;
+    margin: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+/* Горизонтально прокручиваемое меню */
+/* Основной контейнер для меню */
+.section__menu {
+    width: 100%;
+    height: 40px;
+    overflow: hidden;
+    position: relative;
+    margin: 0;
+}
+
+/* Прокручиваемый список */
+.section__menu-list {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    gap: 5px;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch; /* Скрываю скролл в firefox */
+    margin-left: 16px;
+}
+
+/* Кнопки в меню */
+.section__menu-item {
+    max-width: 244px;
+    flex: 0 0 auto;
+    padding: 10px 20px;
+    border: 2px solid transparent;
+    color: #7E7E82;
+    border-radius: 6px;
+    background-color: #F8F8F8;
+    font-size: 16px;
+}
+
+/*Размытие у меню*/
+.section__gradient {
+    width: 24px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    pointer-events: none;
+    background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
+}
+
+/* Скрываю скролл в chrome */
+.section__menu-list::-webkit-scrollbar {
+    display: none;
+}
+
+/* Первая активная кнопка */
+.section__menu-item--active {
+    min-width: 246px;
+    height: 40px;
+    border-color: #B8FFEC;
+    background-color: white;
+}
+
+/* Основной контент */
+.section__first-block {
+    width: 100%;
+    min-height: 322px;
+    margin: 0;
+    display: block;
+}
+
+/* Текст */
+.section__text {
+    width: 100%;
+    max-width: 288px;
+    min-height: 90px;
+    font-size: 14px;
+    margin-right: 16px;
+    margin-left: 16px;
+    line-height: 18px;
+    letter-spacing: normal;
+    font-family: "TT Lakes", sans-serif;
+}
+
+/*Скрытый текст*/
+.section__hidden-text,
+.section__hidden-text-second {
+    display: none;
+}
+
+/* Секция читать далее */
+.section__read-more {
+    max-width: 132px;
+    min-height: 24px;
+    margin-bottom: 16px;
+    margin-top: 16px;
+    margin-left: 16px;
+}
+
+/* Кнопка */
+.section__read-more-text{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #F8F8F8;
+    border: none;
+    max-width: 132px;
+    height: 24px;
+    font-size: 16px;
+    padding: 0;
+
+}
+
+/*Левая секция (SVG-стрелки)*/
+.section__read-more-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+}
+
+/*Правая секция - текст*/
+.section__read-more-text-content {
+    font-family: "TT Lakes", sans-serif;
+    font-size: 16px;
+    color: #1B1C21;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    height: 24px;
+    padding: 0;
+}
+
+/* Изображение */
+.section__img-picture {
+    width: 100%;
+    max-width: 532px;
+    height: auto;
+}
+
+@media (min-width: 768px){
 
     /*Тело*/
     body {
-        max-width: 100%;
+        width: 100%;
+    }
+
+    /*Шапка*/
+    .header {
+        display: flex;
+    }
+
+    /*Иконка меню*/
+    .header__icon-burger {
+        margin-right: 20px;
+        margin-left: 24px;
+    }
+
+    /*Иконка для ремонта, для звонков, для сообщений*/
+    .header__icon-repair,
+    .header__icon-phone,
+    .header__icon-message {
+        display: flex;
+        margin-right: 16px;
+    }
+
+    .header__divider--first {
+        display: flex;
+    }
+
+    /*Иконка контакты*/
+    .header__icon-contacts {
+        margin-right: 20px;
+    }
+
+    /*Иконка для статуса*/
+    .header__icon-status {
+        margin-right: 24px;
+    }
+
+    /*Логотип*/
+    .header__logo-container {
+        margin-right: 251px;
+    }
+
+    /*Разделитель снизу*/
+    .header__svg-768 {
+        display: block;
+        height: 1px;
+        width: 100%;
+        position: absolute;
+    }
+
+    .header__svg-320 {
+        display: none;
+    }
+
+    /*Основная секция*/
+    .section {
+        width: 100%;
+        min-height: 416px;
+    }
+
+    /*Скрытые иконки*/
+    .section__icon {
+        display: none;
+    }
+
+
+    /*Заголовок секции*/
+    .section__title {
+        width: 100%;
+        max-width: 300px;
+        min-height: 40px;
+        margin-right: 512px;
+        margin-bottom: 32px;
+        display: flex;
+    }
+
+    /*Боковой разделитель*/
+    .section__img-highlight {
+        margin-right: 20px;
+    }
+
+    /*Заголовок*/
+    .section__title-text {
+        max-width: 233px;
+        min-height: 40px;
+        font-weight: 700;
+        line-height: 40px;
+        letter-spacing: -0.6px;
+    }
+
+    /* Горизонтально прокручиваемое меню */
+    /* Основной контейнер для меню */
+    .section__menu {
+        max-width: 776px;
+        min-height: 40px;
+    }
+
+    /* Основной контент */
+    .section__first-block {
+        width: 100%;
+        min-height: 136px;
+        margin: 32px 25px 40px 24px;
+        display: flex;
+    }
+
+    .section__content {
+        display: block;
+    }
+
+    /* Текст */
+    .section__text {
+        width: 100%;
+        max-width: 312px;
+        min-height: 160px;
+        margin-right: 48px;
         font-family: "TT Lakes", sans-serif;
-        background-color: #F8F8F8;
-        margin: 0;
-        padding: 0;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0.02em;
+        margin-bottom: 10px;
+        flex: 1;
+    }
+
+    .section__hidden-text {
+        display: flex;
+    }
+
+    /*Скрытый текст*/
+    .section__hidden-text-second {
+        display: none;
+    }
+
+    /* Изображение */
+    .section__img-picture {
+        width: 100%;
+        max-width: 360px;
+        min-height: 208px;
+    }
+}
+
+@media (min-width: 1120px) {
+
+    /*Тело*/
+    body {
+        width: 100%;
     }
 
     /*Шапка скрыта*/
@@ -27,82 +429,91 @@
 
     /*Основная секция*/
     .section {
-        max-width: 100%;
-        min-height: 535px;
-        background-color: #F8F8F8;
-        margin-top: 0;
-        padding-top: 0;
+        width: 100%;
+        margin: 0;
+        box-sizing: border-box;
     }
 
 
-    /*Секция заголовок и иконки*/
+    /* Секция заголовок и иконки */
     .section__title-icon {
         display: flex;
+        max-width: 1096px;
+        min-height: 40px;
+        margin-top: 42px;
+        margin-bottom: 8px;
+        margin-right: 25px;
     }
 
-    /*Заголовок секции*/
-    .section__title {
-        max-width: 266px;
-        height: 40px;
-        margin: 42px 450px 8px 1px;
+    /* Контейнер для иконок */
+    .section__icon {
         display: flex;
     }
 
-    /*Боковой разделитель*/
+    /* Заголовок секции */
+    .section__title {
+        display: flex;
+        align-items: center;
+        max-width: 266px;
+        margin-right: 450px;
+        margin-bottom: 0;
+
+    }
+
+    /* Боковой разделитель */
     .section__img-highlight {
         width: 3px;
         height: 40px;
         margin-right: 30px;
+        background-color: #41F6D7;
+        flex-shrink: 0;
     }
 
-    /*Заголовок текст*/
+    /* Заголовок текст */
     .section__title-text {
-        width: 233px;
-        height: 40px;
-        margin: 0;
-        padding-top: 5px;
-        padding-bottom: 5px;
         font-weight: 700;
         font-size: 28px;
         line-height: 40px;
         letter-spacing: -0.6px;
+        white-space: nowrap;
     }
 
-    /*Иконка для статуса*/
-    .section__icon-status {
-        max-width: 168px;
-        height: 40px;
-        margin: 42px 7px 8px 32px;
-    }
-
-    /*Иконка для ремонта*/
+    /* стиль для иконки ремонта */
     .section__icon-repair {
-        max-width: 173px;
-        height: 40px;
-        margin-bottom: 8px;
-        margin-top: 42px;
+        display: flex;
+        align-items: center;
+        margin-right: 32px;
+    }
+
+    /* стиль для иконки статус */
+    .section__icon-status {
+        display: flex;
+        align-items: center;
+        margin-right: 7px;
     }
 
     /*Текст для статуса*/
     .section__span-status {
-        max-width: 125px;
+        width: 119px;
         height: 24px;
         font-weight: 500;
         font-size: 16px;
         line-height: 24px;
         letter-spacing: -0.2px;
         text-align: right;
+        margin-right: 8px;
     }
 
     /*Текст для ремонта*/
     .section__span-repair {
-        max-width: 119px;
+        width: 125px;
         height: 24px;
         font-weight: 500;
         font-size: 16px;
         line-height: 24px;
         letter-spacing: -0.2px;
         text-align: right;
+        margin-right: 8px;
     }
 
     /*Иконки - изображения*/
@@ -110,34 +521,38 @@
         width: 40px;
         height: 40px;
         border-radius: 20px;
-        background-color: #FF3E79;
         border: none;
         padding: 0;
         margin: 0;
+        background-color: #FF3E79;
     }
 
     /* Горизонтально прокручиваемое меню */
     /* Основной контейнер для меню */
     .section__menu {
+        width: 100%;
         max-width: 1063px;
-        height: 82px;
-        margin-left: 32px;
-        margin-right: 25px;
+        min-height: 82px;
+        margin: 8px 25px 7px 32px;
+        position: relative;
+        overflow: visible;
+
     }
 
     /* Прокручиваемый список */
     .section__menu-list {
         display: flex;
         flex-wrap: wrap;
-        white-space: nowrap;
-        max-width: 1063px;
-        height: 82px;
+        overflow: visible;
+        gap: 5px;
+        margin: 0;
     }
+
 
     /* Кнопки в меню */
     .section__menu-item {
-        width: auto;
-        padding: 10px;
+        flex: 0 0 auto;
+        padding: 8px 16px;
         border: 2px solid transparent;
         color: #7E7E82;
         border-radius: 6px;
@@ -146,7 +561,7 @@
         font-weight: 500;
         line-height: 24px;
         letter-spacing: -0.2px;
-
+        white-space: nowrap;
     }
 
     /*Размытие у меню*/
@@ -154,10 +569,7 @@
         display: none;
     }
 
-    /* Первая активная кнопка */
     .section__menu-item--active {
-        width: 233px;
-        height: 40px;
         border-color: #B8FFEC;
         background-color: white;
     }
@@ -194,11 +606,12 @@
 
     /* Основной контент */
     .section__first-block {
-        max-width: 100%;
+        width: 100%;
         display: flex;
+        margin: 0;
     }
 
-    /*блок тексти кнопка*/
+    /*блок текст и кнопка*/
     .section__content {
         display: block;
     }
@@ -206,7 +619,7 @@
     /* Текст */
     .section__text {
         max-width: 490px;
-        height: 160px;
+        min-height: 160px;
         font-family: "TT Lakes", sans-serif;
         font-weight: 400;
         font-size: 14px;
@@ -216,600 +629,31 @@
         flex: 1;
     }
 
+    .section__hidden-text {
+        display: flex;
+    }
+
+    .section__hidden-text-second {
+        display: contents;
+    }
+
     /* Секция читать далее */
     .section__read-more {
         max-width: 132px;
-        height: 24px;
+        min-height: 24px;
         margin-left: 32px;
-    }
-
-    /* Кнопка */
-    .section__read-more-text{
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        background-color: #F8F8F8;
-        border: none;
-        max-width: 132px;
-        height: 24px;
-        font-size: 16px;
-        padding: 0;
-
-    }
-
-    /*Левая секция (SVG-стрелки)*/
-    .section__read-more-icon {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 24px;
-        height: 24px;
-    }
-
-    /*Правая секция - текст*/
-    .section__read-more-text-content {
-        font-family: "TT Lakes", sans-serif;
-        font-size: 16px;
-        color: #1B1C21;
-        font-weight: 500;
-        display: flex;
-        align-items: center;
-        white-space: nowrap;
-        height: 24px;
-        padding: 0;
     }
 
     /* Изображение */
     .section__img-picture {
+        width: 100%;
         max-width: 532px;
-        height: 307px;
+        min-height: 307px;
         margin-top: 7px;
         margin-right: 29px;
         margin-bottom: 49px;
     }
 }
-
-@media (max-width: 768px) and (min-width: 321px) {
-
-    /*Общие стили*/
-    * {
-        box-sizing: border-box;
-    }
-
-    /*Тело*/
-    body {
-        max-width: 100%;
-        font-family: "TT Lakes", sans-serif;
-        margin: 0;
-        padding: 0;
-    }
-
-    /*Шапка*/
-    .header {
-        display: flex;
-        align-items: center;
-        max-width: 100%;
-        height: 88px;
-        margin: 0;
-        padding: 0;
-        position: relative;
-    }
-    /*Иконки*/
-    .header__icon {
-        margin-top: 24px;
-        margin-bottom: 24px;
-    }
-
-    /*Иконки - изображения*/
-    .header__icon-img {
-        width: 40px;
-        height: 40px;
-        border-radius: 20px;
-        background-color: #FF3E79;
-        border: none;
-    }
-
-    /*Иконка меню*/
-    .header__icon-burger {
-        margin-right: 20px;
-        margin-left: 24px;
-    }
-
-    /*Иконка для ремонта, для звонков, для сообщений*/
-    .header__icon-repair,
-    .header__icon-phone,
-    .header__icon-message {
-        margin-right: 16px;
-    }
-
-    /*Иконка контакты*/
-    .header__icon-contacts {
-        margin-right: 20px;
-    }
-
-    /*Иконка для статуса*/
-    .header__icon-status {
-        margin-right: 24px;
-    }
-
-    /*Логотип*/
-    .header__logo-container {
-        width: 97px;
-        height: 50px;
-        margin-top: 19px;
-        margin-bottom: 19px;
-        margin-right: 251px;
-    }
-
-    /*Разделитель*/
-    .header__divider {
-        margin-bottom: 28px;
-        margin-top: 28px;
-        margin-right: 20px;
-    }
-
-    /*Разделитель снизу*/
-    .header__svg-768 {
-        display: block;
-        height: 1px;
-        width: 100%;
-        position: absolute;
-    }
-
-    .header__svg-320 {
-        display: none;
-    }
-
-    /*Основная секция*/
-    .section {
-        max-width: 100%;
-        min-height: 416px;
-        background-color: #F8F8F8;
-        margin-top: 0;
-        padding-top: 24px;
-    }
-
-    /*Скрытые иконки*/
-    .section__icon {
-        display: none;
-    }
-
-
-    /*Заголовок секции*/
-    .section__title {
-        max-width: 257px;
-        height: 40px;
-        margin-right: 512px;
-        margin-bottom: 32px;
-        display: flex;
-
-    }
-
-    /*Боковой разделитель*/
-    .section__img-highlight {
-        width: 4px;
-        height: 40px;
-        margin-right: 20px;
-    }
-
-    /*Заголовок*/
-    .section__title-text {
-        width: 233px;
-        height: 40px;
-        margin: 0;
-        padding-top: 5px;
-        padding-bottom: 5px;
-        font-weight: 700;
-        font-size: 28px;
-        line-height: 40px;
-        letter-spacing: -0.6px;
-    }
-
-    /* Горизонтально прокручиваемое меню */
-    /* Основной контейнер для меню */
-    .section__menu {
-        max-width: 776px;
-        height: 40px;
-        overflow: hidden;
-        position: relative;
-    }
-
-    /* Прокручиваемый список */
-    .section__menu-list {
-        display: flex;
-        overflow-x: auto;
-        white-space: nowrap;
-        gap: 5px;
-        scrollbar-width: none;
-        -webkit-overflow-scrolling: touch; /* Скрываю скролл в firefox */
-        margin-left: 16px;
-    }
-
-    /* Кнопки в меню */
-    .section__menu-item {
-        max-width: 244px;
-        flex: 0 0 auto;
-        padding: 10px 20px;
-        border: 2px solid transparent;
-        color: #7E7E82;
-        border-radius: 6px;
-        background-color: #F8F8F8;
-        font-size: 16px;
-    }
-
-    /*Размытие у меню*/
-    .section__gradient {
-        width: 24px;
-        height: 40px;
-        position: absolute;
-        top: 0;
-        right: 0;
-        pointer-events: none;
-        background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
-    }
-
-    /* Скрываю скролл в chrome */
-    .section__menu-list::-webkit-scrollbar {
-        display: none;
-    }
-
-    /* Первая активная кнопка */
-    .section__menu-item--active {
-        min-width: 246px;
-        height: 40px;
-        border-color: #B8FFEC;
-        background-color: white;
-    }
-
-    /* Основной контент */
-    .section__first-block {
-        max-width: 100%;
-        min-height: 136px;
-        margin: 32px 25px 40px 24px;
-        display: flex;
-    }
-
-    .section__content {
-        display: block;
-    }
-
-    /* Текст */
-    .section__text {
-        max-width: 312px;
-        height: 160px;
-        margin-right: 48px;
-        font-family: "TT Lakes", sans-serif;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 20px;
-        letter-spacing: 0.02em;
-        margin-bottom: 10px;
-        flex: 1;
-    }
-
-    /*Скрытый текст*/
-    .section__hidden-text-second {
-        display: none;
-    }
-
-    /* Секция читать далее */
-    .section__read-more {
-        max-width: 132px;
-        height: 24px;
-
-
-    }
-
-    /* Кнопка */
-    .section__read-more-text{
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        background-color: #F8F8F8;
-        border: none;
-        max-width: 132px;
-        height: 24px;
-        font-size: 16px;
-        padding: 0;
-
-    }
-
-    /*Левая секция (SVG-стрелки)*/
-    .section__read-more-icon {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 24px;
-        height: 24px;
-    }
-
-    /*Правая секция - текст*/
-    .section__read-more-text-content {
-        font-family: "TT Lakes", sans-serif;
-        font-size: 16px;
-        color: #1B1C21;
-        font-weight: 500;
-        display: flex;
-        align-items: center;
-        white-space: nowrap;
-        height: 24px;
-        padding: 0;
-    }
-
-    /* Изображение */
-    .section__img-picture {
-        max-width: 360px;
-        height: 208px;
-    }
-}
-
-@media (max-width: 320px) {
-
-    /*Общие стили*/
-    * {
-        box-sizing: border-box;
-    }
-
-    /*Тело*/
-    body {
-        max-width: 320px;
-        font-family: "TT Lakes", sans-serif;
-        margin: 0;
-        padding: 0;
-    }
-
-    /*Шапка*/
-    .header {
-        display: flex;
-        align-items: center;
-        max-width: 100%;
-        height: 88px;
-        margin: 0;
-        position: relative;
-    }
-
-    /*Иконки*/
-    .header__icon {
-        margin-top: 24px;
-        margin-bottom: 24px;
-    }
-
-    /*Иконки - изображения*/
-    .header__icon-img {
-        width: 40px;
-        height: 40px;
-        border-radius: 20px;
-        background-color: #FF3E79;
-        border: none;
-    }
-
-    /*Иконка меню*/
-    .header__icon-burger {
-        margin-right: 16px;
-        margin-left: 16px;
-    }
-
-    /*Иконка для ремонта и для статуса*/
-    .header__icon-repair,
-    .header__icon-status{
-        margin-right: 16px;
-    }
-
-    /*Скрытые иконки*/
-    .header__icon-phone,
-    .header__icon-message,
-    .header__icon-contacts,
-    .header__divider--first,
-    .header__svg-768 {
-        display: none;
-    }
-
-    /*Логотип*/
-    .header__logo-container {
-        width: 97px;
-        height: 50px;
-        margin-top: 19px;
-        margin-bottom: 19px;
-        margin-right: 16px;
-    }
-
-    /*Разделитель*/
-    .header__divider {
-        margin-bottom: 28px;
-        margin-top: 28px;
-        margin-right: 20px;
-    }
-
-    /*Разделитель снизу*/
-    .header__svg-320 {
-        display: block;
-        height: 1px;
-        width: 100%;
-        margin: 0;
-        position: absolute;
-    }
-
-    /*Основная секция*/
-    .section {
-        max-width: 320px;
-        min-height: 509px;
-        background-color: #F8F8F8;
-        margin-top: 0;
-        padding-top: 24px;
-    }
-
-    /*Скрытые иконки*/
-    .section__icon {
-        display: none;
-    }
-
-    .section__title-icon {
-        max-width: 304px;
-        height: 40px;
-        padding: 0;
-        margin-right: 16px;
-        margin-bottom: 24px;
-    }
-
-    /*Заголовок секции*/
-    .section__title {
-        max-width: 304px;
-        height: 40px;
-        display: flex;
-    }
-
-    /*Боковой разделитель*/
-    .section__img-highlight {
-        width: 4px;
-        height: 40px;
-        margin-right: 12px;
-    }
-
-    /*Заголовок*/
-    .section__title-text {
-        font-size: 28px;
-        width: 288px;
-        height: 30px;
-        margin: 0;
-        padding-top: 5px;
-        padding-bottom: 5px;
-    }
-
-    /* Горизонтально прокручиваемое меню */
-    /* Основной контейнер для меню */
-    .section__menu {
-        max-width: 504px;
-        height: 40px;
-        overflow: hidden;
-        position: relative;
-        margin: 0;
-    }
-
-    /* Прокручиваемый список */
-    .section__menu-list {
-        display: flex;
-        overflow-x: auto;
-        white-space: nowrap;
-        gap: 5px;
-        scrollbar-width: none;
-        -webkit-overflow-scrolling: touch; /* Скрываю скролл в firefox */
-        margin-left: 16px;
-    }
-
-    /* Кнопки в меню */
-    .section__menu-item {
-        max-width: 244px;
-        flex: 0 0 auto;
-        padding: 10px 20px;
-        border: 2px solid transparent;
-        color: #7E7E82;
-        border-radius: 6px;
-        background-color: #F8F8F8;
-        font-size: 16px;
-    }
-
-    /*Размытие у меню*/
-    .section__gradient {
-        width: 24px;
-        height: 40px;
-        position: absolute;
-        top: 0;
-        right: 0;
-        pointer-events: none;
-        background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
-    }
-
-    /* Скрываю скролл в chrome */
-    .section__menu-list::-webkit-scrollbar {
-        display: none;
-    }
-
-    /* Первая активная кнопка */
-    .section__menu-item--active {
-        min-width: 246px;
-        height: 40px;
-        border-color: #B8FFEC;
-        background-color: white;
-    }
-
-    /* Основной контент */
-    .section__first-block {
-        max-width: 320px;
-        min-height: 322px;
-        margin: 0;
-        display: block;
-    }
-
-    /* Текст */
-    .section__text {
-        max-width: 288px;
-        height: 90px;
-        font-size: 14px;
-        margin-right: 16px;
-        margin-left: 16px;
-        line-height: 18px;
-        letter-spacing: normal;
-        font-family: "TT Lakes", sans-serif;
-    }
-
-    /*Скрытый текст*/
-    .section__hidden-text,
-    .section__hidden-text-second {
-        display: none;
-    }
-
-    /* Секция читать далее */
-    .section__read-more {
-        max-width: 132px;
-        height: 24px;
-        margin-bottom: 16px;
-        margin-top: 16px;
-        margin-left: 16px;
-    }
-
-    /* Кнопка */
-    .section__read-more-text{
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        background-color: #F8F8F8;
-        border: none;
-        max-width: 132px;
-        height: 24px;
-        font-size: 16px;
-        padding: 0;
-
-    }
-
-    /*Левая секция (SVG-стрелки)*/
-    .section__read-more-icon {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 24px;
-        height: 24px;
-    }
-
-    /*Правая секция - текст*/
-    .section__read-more-text-content {
-        font-family: "TT Lakes", sans-serif;
-        font-size: 16px;
-        color: #1B1C21;
-        font-weight: 500;
-        display: flex;
-        align-items: center;
-        white-space: nowrap;
-        height: 24px;
-        padding: 0;
-    }
-
-    /* Изображение */
-    .section__img-picture {
-        max-width: 320px;
-        height: 176px;
-    }
-}
-
 
 
 
