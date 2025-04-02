@@ -143,6 +143,7 @@ body {
     margin: 0;
     padding-top: 5px;
     padding-bottom: 5px;
+    white-space: nowrap;
 }
 
 /* Горизонтально прокручиваемое меню */
@@ -375,6 +376,9 @@ body {
             font-weight: 700;
             line-height: 40px;
             letter-spacing: -0.6px;
+            white-space: nowrap;
+            flex-shrink: 0; /* Запрещает сжатие */
+            min-width: 0; /* Разрешает сжатие, но сохраняет nowrap */
         }
 
         /* Горизонтально прокручиваемое меню */
