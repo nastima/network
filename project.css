@@ -1,8 +1,54 @@
-/*Иконки - изображения*/
-.header__icon-img {
+/*Подключение шрифта*/
+@font-face {
+    font-family: "TT Lakes";
+    src: url("fonts/TTLakes-Regular.woff");
+}
+
+/*Общие свойства*/
+* {
+    box-sizing: border-box;
+}
+
+/*Общие свойства*/
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "TT Lakes", sans-serif;
+}
+
+/*Контейнер главное меню*/
+.main-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+
+    width: 320px;
+    height: 100%;
+    color: #FFFFFF;
+    box-shadow: 16px 0 52px 0 #0E185033,
+    -2px 0 4px 0 #454F7E05;
+}
+
+/*Шапка*/
+.header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+}
+
+/*Иконки*/
+.header__icon {
+    margin-top: 23px;
+    margin-bottom: 53px;
+}
+
+/*Кнопка для иконки*/
+.header__button {
     width: 40px;
     height: 40px;
-    border-radius: 20px;
+    border-radius: 50%;
     background-color: #FF3E79;
     border: none;
     display: flex;
@@ -11,14 +57,165 @@
     cursor: pointer;
 }
 
+/*Иконка меню*/
+.header__icon-burger {
+    margin-right: 16px;
+    margin-left: 24px;
+}
 
-/*Иконки - изображения*/
-.section__icon-img {
+/*Логотип*/
+.header__logo-container {
+    width: 97px;
+    height: 51px;
+    margin-top: 19px;
+    margin-bottom: 46px;
+    margin-right: 78px;
+}
+
+/*Иконка статус*/
+.header__icon-status{
+    margin-right: 24px;
+}
+
+/*МЕНЮ*/
+
+/*Секция меню*/
+.section__menu {
+    width: 222px;
+    height: 876px;
+    position: relative;
+}
+
+/*Список меню - кнопки*/
+.section__menu-list {
+    display: block;
+    position: relative;
+}
+
+/*Боковой разделитель*/
+.section__img-highlight {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 4px;
+    min-height: 32px;
+}
+
+/* Кнопки в меню */
+.section__menu-item {
+
+    padding: 0;
+    margin-left: 24px;
+    margin-bottom: 32px;
+
+    border: none;
+    background-color: #FFFFFF;
+    cursor: pointer;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    font-family: "TT Lakes", sans-serif;
+}
+
+/*Отступ от последней кнопки*/
+.section__menu-item:last-child {
+    margin-bottom: 268px;
+}
+
+/*Активная кнопка*/
+.section__menu-item--active {
+    color: #7E7E82;
+}
+
+/*Секция контакты*/
+.section__contact {
+    width: 196px;
+    height: 124px;
+    margin-left: 24px;
+    margin-bottom: 40px;
+}
+
+/*Иконки внизу меню*/
+.section__icon {
+    display: flex;
+}
+
+/*Кнопки для иконок*/
+.section__button {
     width: 40px;
     height: 40px;
-    border-radius: 20px;
+
     border: none;
+    border-radius: 50%;
+    background-color: #FF3E79;
+    cursor: pointer;
+
     padding: 0;
     margin: 0;
-    background-color: #FF3E79;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*отступы между иконками*/
+.section__icon-wrapper {
+    margin-top: 0;
+    margin-right: 16px;
+    margin-bottom: 16px;
+}
+
+/*Секция ссылки почта и телефон*/
+.section__contact-mail,
+.section__contact-phone {
+    display: block;
+}
+
+/*Ссылка почта*/
+.section__contact-mail {
+    margin-bottom: 12px;
+    font-family: "TT Lakes", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: #1B1C21;
+    text-decoration: none;
+}
+
+/*Ссылка телефон*/
+.section__contact-phone {
+    font-family: "TT Lakes", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.6px;
+    color: #1B1C21;
+    text-decoration: none;
+}
+
+/*Секция языки*/
+.section__language {
+    width: 87px;
+    height: 24px;
+    margin-left: 24px;
+    margin-bottom: 32px;
+}
+
+/*Ссылки языки*/
+.section__language-link {
+    text-decoration: none;
+    color: #1B1C21;
+    font-family: "TT Lakes", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+}
+
+/*Активная ссылка языка*/
+.section__language-link--active {
+    color: #7E7E82;
 }
