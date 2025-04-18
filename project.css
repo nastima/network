@@ -55,6 +55,13 @@ body {
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    transition-property: transform;
+    transition-duration: 0.2s;
+}
+
+/*Кнопка в шапке при наведении*/
+.header__button:hover {
+    transform: scale(1.2);
 }
 
 /*Иконка меню*/
@@ -117,11 +124,17 @@ body {
     line-height: 24px;
     letter-spacing: -0.2px;
     font-family: "TT Lakes", sans-serif;
+    transition-property: color;
+    transition-duration: 0.2s;
 }
 
 /*Отступ от последней кнопки*/
 .section__menu-item:last-child {
     margin-bottom: 268px;
+}
+
+.section__menu-item:hover {
+    color: #7E7E82;
 }
 
 /*Активная кнопка*/
@@ -158,6 +171,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    transition-property: transform;
+    transition-duration: 0.2s;
+}
+
+/*Кнопка в меню при наведении*/
+.section__button:hover {
+    transform: scale(1.2);
 }
 
 /*отступы между иконками*/
@@ -171,6 +192,15 @@ body {
 .section__contact-mail,
 .section__contact-phone {
     display: block;
+    transition-property: transform, color;
+    transition-duration: 0.2s;
+}
+
+/*Ссылки телефон и почта при наведении*/
+.section__contact-mail:hover,
+.section__contact-phone:hover {
+    transform: scale(1.2) translateX(15px);
+    color: #7E7E82;
 }
 
 /*Ссылка почта*/
@@ -213,6 +243,13 @@ body {
     font-size: 16px;
     line-height: 24px;
     letter-spacing: -0.2px;
+    transition-property: color;
+    transition-duration: 0.2s;
+}
+
+/*Ссылки языки при наведении*/
+.section__language-link:hover {
+    color: #7E7E82;
 }
 
 /*Активная ссылка языка*/
