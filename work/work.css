@@ -7,6 +7,8 @@
 /*Общие свойства*/
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 /*Общие свойства*/
@@ -14,18 +16,19 @@ body {
     margin: 0;
     padding: 0;
     width: 100%;
+    overflow-x: hidden;
     font-family: "TT Lakes", sans-serif;
     background-color: #F8F8F8;
 }
 
-/*ПРИ 1120 - ДВА СОСТОЯНИЯ*/
+/*ПРИ 320 - Свайпер*/
 
 /* Шапка*/
 .header {
     margin: 0;
     padding: 0;
     width: 100%;
-    height: 56px;
+    height: 80px;
     position: relative;
     overflow: hidden;
     background: linear-gradient(270deg, #F8F8F8 0%, #FFFFFF 98.61%);
@@ -41,9 +44,7 @@ body {
 
 /* Текст шапки*/
 .header_title {
-    margin-left: 32px;
-    margin-top: 16px;
-    margin-bottom: 16px;
+    margin: 16px;
 }
 
 /* Текст шапки p*/
@@ -54,35 +55,49 @@ body {
     line-height: 24px;
     letter-spacing: -0.2px;
     text-transform: uppercase;
+    color: #7E7E82;
 }
 
-/* основная секция*/
-.section {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px 32px;
-    margin-left: 32px;
-    margin-top: 24px;
+/* Секция Свайпер */
+.section_swiper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
 }
 
-/* Иконки */
-.section_icon {
-    max-width: 240px;
-    min-width: 240px;
-    height: 72px;
+/* Секция контейнер для слайдов */
+.swiper-wrapper {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    margin: 16px 0 16px 16px;
+
+}
+
+/* Слайды */
+.swiper-slide {
+    margin-bottom: 20px;
     padding: 0 16px;
-    border: 1px solid #EAEAEA;
-    background-color: #FFFFFF;
-    border-radius: 6px;
-}
 
-/* Секция свг код */
+    max-width: 240px;
+    min-width: 240px; /* фиксированная ширина */
+    height: 72px;
+
+    display: flex;
+    justify-content: space-between;
+    flex-shrink: 0; /* запрет на сжатие */
+    align-items: center;
+
+    /* touch-action: pan-x;*/
+
+     border: 1px solid #EAEAEA;
+     background-color: #FFFFFF;
+     border-radius: 6px;
+ }
+
+ /* Секция свг код */
 .section_svg {
     padding: 0;
     flex-shrink: 0;
+    margin: 20px 0;
 }
 
 /* Секция свг Леново */
@@ -149,34 +164,55 @@ body {
     height: 40px;
 }
 
+/* Пагинация */
+.swiper-pagination {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 204px!important;
+    height: 12px;
+    margin: 0 58px;
+    padding: 0;
+    overflow: hidden;
+    --swiper-pagination-bullet-horizontal-gap: 6px; /* Переопределяем отступ */
+}
+
+/* Не активные точки */
+.swiper-pagination-bullet {
+    background-color: #DDDDDD;
+    width: 12px;
+    height: 12px;
+    opacity: 1;
+    border-radius: 50%;
+    padding: 0;
+    flex-shrink: 0;
+}
+
+/* Активные точки */
+.swiper-pagination-bullet-active {
+    background-color: #B5B6BC;
+}
+
+/* Градиент справа */
+.fade {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 24px;
+    height: 81px;
+    background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
+    pointer-events: none;
+    z-index: 1;
+}
+
 /* кнопка - скрыть/показать */
 .button_hidden {
-    width: 133px;
-    height: 24px;
-    margin: 46px 0 14px 32px;
-    padding: 0;
-    background-color: #F8F8F8;
-    border: none;
-    display: flex;
-    cursor: pointer;
+    display: none;
 }
 
-/* текст кнопки Скрыть */
-.button_text {
-    font-family: "TT Lakes", sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: -0.2px;
-    color: #1B1C21;
-}
-
-
-/* стрелки вверх */
-.button_up {
-    width: 24px;
-    height: 24px;
-    margin-right: 7px;
+/* Скрыть последние два слайда */
+.swiper-slide:nth-last-child(-n+2) {
+    display: none;
 }
 
 /* свойство для переворота стрелки */
@@ -190,46 +226,58 @@ body {
 }
 
 
+
 /*ПРИ 768*/
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
 
     /* Шапка*/
     .header {
+        height: 56px;
         background: linear-gradient(90deg, #F8F8F8 1.39%, #FFFFFF 100%);
     }
 
     /* Текст шапки*/
     .header_title {
-        margin-left: 24px;
+        margin: 16px 0 16px 24px ;
     }
 
-    /* Для градиента*/
-    .section-wrapper {
+    /* Секция Свайпер */
+    .swiper {
+        overflow: visible; /* Отключаем скрытие */
         position: relative;
     }
 
-    /* основная секция*/
-    .section {
+    /* Секция контейнер для слайдов */
+    .swiper-wrapper {
         display: flex;
         flex-wrap: wrap;
         gap: 16px 24px;
+        transform: none !important; /* Отключаем трансформации Swiper */
         margin-left: 24px;
         margin-top: 24px;
     }
 
-    /* Иконки */
-    .section_icon {
+    /* Слайды */
+    .swiper-slide {
         max-width: 224px;
-        min-width: 224px;
-        height: 72px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 0 16px;
-        border: 1px solid #EAEAEA;
-        background-color: #FFFFFF;
-        border-radius: 6px;
+        min-width: 224px; /* фиксированная ширина */
+        flex-shrink: 1; /* Разрешаем сжатие */
+        margin: 0;
+    }
+
+    /* Градиент справа */
+    .fade {
+        bottom: 0;
+        top: auto;
+        width: 24px;
+        height: 33px;
+        background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
+    }
+
+    /* Пагинация */
+    .swiper-pagination {
+        display: none;
     }
 
     /* Иконки скрытые*/
@@ -240,26 +288,72 @@ body {
     /* кнопка - скрыть/показать */
     .button_hidden {
         margin: 24px 0 34px 24px;
+        width: 134px;
+        height: 24px;
+        padding: 0;
+        background-color: #F8F8F8;
+        border: none;
+        display: flex;
+        cursor: pointer;
     }
 
+    /* текст кнопки Скрыть */
+    .button_text {
+        font-family: "TT Lakes", sans-serif;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+        color: #1B1C21;
+    }
 
     /* стрелки вверх */
     .button_up {
         width: 24px;
         height: 24px;
-        margin-right: 7px;
+        margin-right: 9px;
     }
-
-    /* градиент*/
-    .fade {
-        width: 24px;
-        height: 33px;
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        pointer-events: none;
-        background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
-
-    }
-
 }
+
+
+/*ПРИ 1120 - ДВА СОСТОЯНИЯ*/
+@media (min-width: 1120px) {
+    /* Шапка*/
+    .header {
+        height: 56px;
+    }
+
+    /* Текст шапки*/
+    .header_title {
+        margin: 16px 0 16px 32px;
+    }
+
+    /* Иконки скрытые*/
+    .section_icon-hidden {
+        display: flex;
+    }
+
+    /* Секция контейнер для слайдов */
+    .swiper-wrapper {
+        gap: 16px 32px;
+        margin-left: 32px;
+    }
+
+    /* Градиент справа */
+    .fade {
+        display: none;
+    }
+
+    /* кнопка - скрыть/показать */
+    .button_hidden {
+        width: 133px;
+        margin: 46px 0 14px 32px;
+    }
+
+    /* стрелки вверх */
+    .button_up {
+        margin-right: 8px;
+    }
+}
+
+

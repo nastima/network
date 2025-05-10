@@ -5,7 +5,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Кнопки на JS</title>
-  <link rel="stylesheet" type="text/css" href="work.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" type="text/css" href="work.css">
 </head>
 <body>
 
@@ -23,11 +25,14 @@
 </div>
 
 </div>
-<div class="section-wrapper">
-<!-- Основная секция -->
-<div class="section">
+<!-- Секция Свайпер -->
+<div class="swiper section_swiper">
+
+<!-- Секция Свайпер-врайпер - контейнер для слайдов -->
+<div class="swiper-wrapper">
+
 <!-- Значок Леново -->
-<div class="section_icon">
+<div class="swiper-slide">
   <div class="section_svg section_lenovo">
   <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="108" height="32"
        fill="none">
@@ -53,7 +58,7 @@
   </div>
 </div>
 <!-- Значок  Самсунг-->
-<div class="section_icon">
+<div class="swiper-slide">
   <!-- Свг код-->
   <div class="section_svg section_samsung">
   <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="116" height="39"
@@ -80,7 +85,7 @@
   </div>
 </div>
 <!-- Значок Эпл-->
-<div class="section_icon">
+<div class="swiper-slide">
   <!-- Свг код-->
     <div class="section_svg section_apple">
       <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="44" height="44"
@@ -107,7 +112,7 @@
     </div>
   </div>
 <!-- Значок Соник -->
-<div class="section_icon section_icon-hidden">
+<div class="swiper-slide section_icon-hidden">
   <div class="section_svg section_sonic">
     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="128" height="21"
          fill="none">
@@ -133,7 +138,7 @@
   </div>
 </div>
 <!-- Значок Бош -->
-<div class="section_icon">
+<div class="swiper-slide">
   <div class="section_svg section_bosch">
     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="128" height="30"
          fill="none">
@@ -159,7 +164,7 @@
   </div>
 </div>
 <!-- Значок HP -->
-<div class="section_icon">
+<div class="swiper-slide">
   <div class="section_svg section_hp">
     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="52" height="52"
          fill="none">
@@ -185,7 +190,7 @@
   </div>
 </div>
 <!-- Значок Асер -->
-<div class="section_icon">
+<div class="swiper-slide">
   <div class="section_svg section_acer">
     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="94" height="24"
          fill="none">
@@ -211,7 +216,7 @@
   </div>
 </div>
 <!-- Значок Сони -->
-<div class="section_icon section_icon-hidden">
+<div class="swiper-slide section_icon-hidden">
   <div class="section_svg section_sony">
     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="128" height="26" fill="none">
       <path fill="url(#a-7)" d="M0 0h128v25.6H0z"/>
@@ -235,7 +240,7 @@
   </div>
 </div>
 <!-- Значок Леново -->
-<div class="section_icon section_icon-hidden">
+<div class="swiper-slide section_icon-hidden">
     <div class="section_svg section_lenovo">
       <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="108" height="32"
            fill="none">
@@ -261,7 +266,7 @@
     </div>
   </div>
 <!-- Значок  Самсунг-->
-<div class="section_icon section_icon-hidden">
+<div class="swiper-slide section_icon-hidden">
     <!-- Свг код-->
     <div class="section_svg section_samsung">
       <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="116" height="39"
@@ -288,7 +293,7 @@
     </div>
   </div>
 <!-- Значок Эпл-->
-<div class="section_icon section_icon-hidden">
+<div class="swiper-slide section_icon-hidden">
     <!-- Свг код-->
     <div class="section_svg section_apple">
       <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="44" height="44"
@@ -315,6 +320,11 @@
     </div>
   </div>
 </div>
+
+<!--Точки для свайпа-->
+<div class="swiper-pagination"></div>
+
+<!--Градиент справа-->
 <div class="fade"></div>
 </div>
 
@@ -332,6 +342,8 @@
   <span class="button_text">Показать все</span>
   </button>
 
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="main.js"></script>
+
 </body>
 </html>
